@@ -3,8 +3,13 @@ import "./styles.css";
 import { Navigate } from "react-router-dom";
 import CharacterSearch from "./Search-Functions/characterSearch";
 import icon from "../assets/icon.png";
+import charactersData from "./Search-Functions/charactersData";
 
 export default function Menu() {
+  const [selectedElement, setSelectedElement] = useState("All");
+  const [selectedRarity, setSelectedRarity] = useState("All");
+  const [selectedNation, setSelectedNation] = useState("All");
+
   const [goToCharacter, setGoToWeapon] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
   const [goToWeapon, setGoToMaterial] = React.useState(false);
@@ -26,6 +31,28 @@ export default function Menu() {
       });
     }
   };
+
+  const handleElementChange = (event) => {
+    setSelectedElement(event.target.value);
+  };
+
+  const handleRarityChange = (event) => {
+    setSelectedRarity(event.target.value);
+  };
+
+  const handleNationChange = (event) => {
+    setSelectedNation(event.target.value);
+  };
+
+  const filteredCharacters = charactersData.filter((character) => {
+    const isElementMatched =
+      selectedElement === "All" || character.element === selectedElement;
+    const isRarityMatched =
+      selectedRarity === "All" || character.rarity === parseInt(selectedRarity);
+    const isNationMatched =
+      selectedNation === "All" || character.nation === selectedNation;
+    return isElementMatched && isRarityMatched && isNationMatched;
+  });
 
   return (
     <html lang="en">
@@ -70,85 +97,82 @@ export default function Menu() {
           />
         </div>
 
-        <div className="button-sort">
-          <button>Element</button>
-          <button>Rarity</button>
-          <button>Region</button>
-        </div>
-        <div className="character-cards">
+        <div>
           <center>
-            <img
-              src="https://api.genshin.dev/characters/amber/icon"
-              alt=""
-              onClick={() => {
-                setSearch("amber");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/barbara/icon"
-              alt=""
-              onClick={() => {
-                setSearch("barbara");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/bennett/icon"
-              alt=""
-              onClick={() => {
-                setSearch("bennett");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/fischl/icon"
-              alt=""
-              onClick={() => {
-                setSearch("fischl");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/chongyun/icon"
-              alt=""
-              onClick={() => {
-                setSearch("chongyun");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/kaeya/icon"
-              alt=""
-              onClick={() => {
-                setSearch("kaeya");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/albedo/icon"
-              alt=""
-              onClick={() => {
-                setSearch("albedo");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/aloy/icon"
-              alt=""
-              onClick={() => {
-                setSearch("aloy");
-                scrollToElement();
-              }}
-            />
-            <img
-              src="https://api.genshin.dev/characters/beidou/icon"
-              alt=""
-              onClick={() => {
-                setSearch("beidou");
-                scrollToElement();
-              }}
-            />
+            <div className="filter">
+              <div>
+                <label className="label">
+                  Element:
+                  <select
+                    value={selectedElement}
+                    onChange={handleElementChange}
+                    className="selection"
+                  >
+                    <option value="All">All</option>
+                    <option value="Pyro">Pyro</option>
+                    <option value="Hydro">Hydro</option>
+                    <option value="Anemo">Anemo</option>
+                    <option value="Electro">Electro</option>
+                    <option value="Cryo">Cryo</option>
+                    <option value="Geo">Geo</option>
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <label className="label">
+                  Rarity:
+                  <select
+                    value={selectedRarity}
+                    onChange={handleRarityChange}
+                    className="selection"
+                  >
+                    <option value="All">All</option>
+                    <option value="4">4 stars</option>
+                    <option value="5">5 stars</option>
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <label className="label">
+                  Nation:
+                  <select
+                    value={selectedNation}
+                    onChange={handleNationChange}
+                    className="selection"
+                  >
+                    <option value="All">All</option>
+                    <option value="Mondstadt">Mondstadt</option>
+                    <option value="Liyue">Liyue</option>
+                    <option value="Inazuma">Inazuma</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </center>
+
+          <center>
+            <div className="character-cards">
+              {filteredCharacters.map((character, index) => (
+                <div
+                  key={index}
+                  className="character-item"
+                  onClick={() => {
+                    scrollToElement();
+                    setSearch(character.name);
+                  }}
+                >
+                  <img
+                    src={`https://api.genshin.dev/characters/${character.name}/icon`}
+                    alt={character.name}
+                    width="50"
+                    height="50"
+                  />
+                  {character.name}
+                </div>
+              ))}
+            </div>
           </center>
         </div>
       </body>

@@ -161,17 +161,18 @@ h2 {
 /*Character Card*/
 
 .character-cards {
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .character-cards img {
-  max-width: 500px;
   cursor: pointer;
-  margin: 10px;
-  margin-top: 5vw;
+  margin: 5px;
+  margin-top: 2vw;
   width: 10vw;
+  height: 10vw;
   border-radius: 20px;
   transition: transform 0.2s;
   background: linear-gradient(
@@ -179,6 +180,17 @@ h2 {
     rgba(106, 9, 121, 1) 0%,
     rgba(246, 0, 255, 1) 100%
   );
+}
+
+.character-item {
+  font-size: 1.2vw;
+  color: white;
+  font-family: Primetime;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .character-cards img:hover {
@@ -273,11 +285,13 @@ input {
 }
 
 .selection {
+  width: 8vw;
+  border-radius: 5vw;
   margin: 2vw;
   font-size: 1.2vw;
   padding: 1vw;
   color: white;
-  background-color: black;
+  background-color: #0e050c;
 }
 
 .char-name {
@@ -316,4 +330,18 @@ input {
 
 .banner-img img {
   border-radius: 3vw;
+}
+
+.label {
+  color: white;
+  font-size: 2vw;
+  font-family: Genshin;
+}
+
+.filter {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+  align-items: center;
 }
