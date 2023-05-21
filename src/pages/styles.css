@@ -345,3 +345,38 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+/* Nations */
+
+.all-nations {
+  margin-top: 3vw;
+}
+
+.nations {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.nations img {
+  width: 100%;
+  transition: transform 1s, filter 2s ease-in-out;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+.nations:hover img {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.centered-text {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+  font-size: 2vw;
+  font-family: Primetime;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

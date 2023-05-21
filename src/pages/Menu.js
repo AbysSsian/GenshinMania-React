@@ -6,6 +6,10 @@ import icon from "../assets/icon.png";
 import event1 from "../assets/recollectors-path.png";
 import event2 from "../assets/overflowing-mastery.png";
 import Banner from "./Carousel";
+import mondstadt from "../assets/mondstadt.png";
+import liyue from "../assets/liyue.png";
+import inazuma from "../assets/inazuma.png";
+import sumeru from "../assets/sumeru.png";
 
 export default function Menu() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
@@ -82,6 +86,25 @@ export default function Menu() {
               </p>
             </div>
           </div>
+          <div className="all-nations">
+            <div className="nations">
+              <img src={mondstadt} />
+              <div className="centered-text">Mondstadt</div>
+            </div>
+            <div className="nations">
+              <img src={liyue} />
+              <div className="centered-text">Liyue</div>
+            </div>
+            <div className="nations">
+              <img src={inazuma} />
+              <div className="centered-text">Inazuma</div>
+            </div>
+            <div className="nations">
+              <img src={sumeru} />
+              <div className="centered-text">Sumeru</div>
+            </div>
+          </div>
+
           <footer>
             <div className="”footer-content”">
               <h3>GenshinMania Footer</h3>
