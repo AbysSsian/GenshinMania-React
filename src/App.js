@@ -12,7 +12,7 @@ export default function App() {
           <Route index element={<Menu />} />
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Character" element={<Character />} />
-          <Route path="/Wepaon" element={<Weapon />} />
+          <Route path="/Weapon" element={<Weapon />} />
           <Route path="/Material" element={<Material />} />
         </Routes>
       </BrowserRouter>

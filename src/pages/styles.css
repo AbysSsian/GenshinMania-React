@@ -96,26 +96,27 @@ h2 {
 /*Buttons*/
 
 .button-group {
-  margin: 3vw 2vw;
+  margin: 3vw 10vw;
 
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4vw;
   background-color: #33102a;
-  padding: 1vw 2vw;
+  padding: 0.5vw 1vw;
   border: solid 2px;
   border-color: white;
   font-size: 2vw;
 }
 
 .button-group button {
+  font-family: Primetime;
   flex: 1;
   border: none;
   border-radius: 50px;
   background-color: #33102a;
   color: whitesmoke;
-  font-size: 2vw;
+  font-size: 1.5vw;
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
@@ -253,9 +254,19 @@ video {
   margin-top: 5vw;
   max-width: 50vw;
   border-radius: 20px;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.events img:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .event-desc {
+  font-family: Genshin;
   margin-top: 1vw;
 }
 
@@ -267,7 +278,7 @@ p {
   margin-left: 2vw;
   color: white;
   margin-top: 10vw;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   margin-right: 2vw;
 }
 
@@ -338,11 +349,13 @@ input {
 .char-card img {
   margin-top: 1vw;
   width: 15vw;
+  border-radius: 20px;
 }
 
 .char-card p {
   margin: 1vw;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
+  font-family: Genshin;
 }
 
 /* Banner */
