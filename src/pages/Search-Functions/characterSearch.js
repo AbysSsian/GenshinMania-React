@@ -49,7 +49,7 @@ export default function CharacterSearch({ search, onSearchChange }) {
         <div className="char-card">
           <h2 className="char-name">{characterData.name}</h2>
           <img
-            src={`https://api.genshin.dev/characters/${search}/portrait`}
+            src={`https://api.genshin.dev/characters/${search}/card`}
             alt="Character Portrait"
           />
 
