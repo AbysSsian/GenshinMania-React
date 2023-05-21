@@ -18,6 +18,42 @@ export default function Menu() {
     return <Navigate to="/Character" />;
   }
 
+  const scrollToPages = () => {
+    const targetElement = document.getElementById("pages");
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
+
+  const scrollToEventBanner = () => {
+    const targetElement = document.getElementById("EventBanner");
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
+
+  const scrollToEvents = () => {
+    const targetElement = document.getElementById("Events");
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
+
+  const scrollToNations = () => {
+    const targetElement = document.getElementById("Nations");
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -31,6 +67,20 @@ export default function Menu() {
             GenshinMania{" "}
           </a>
           <img src={icon} />
+          <div className="nav-elements">
+            <span className="scroll-elements" onClick={scrollToPages}>
+              Pages
+            </span>
+            <span className="scroll-elements" onClick={scrollToEventBanner}>
+              Event Banner
+            </span>
+            <span className="scroll-elements" onClick={scrollToEvents}>
+              Events
+            </span>
+            <span className="scroll-elements" onClick={scrollToNations}>
+              Nations
+            </span>
+          </div>
         </nav>
         <div className="video">
           <video src={videoBg} autoPlay loop />
@@ -44,7 +94,7 @@ export default function Menu() {
           </div>
         </div>
 
-        <div className="sections">
+        <div className="sections" id="pages">
           <div className="button-group">
             <button
               onClick={() => {
@@ -61,12 +111,12 @@ export default function Menu() {
         </div>
         <div>
           <center>
-            <div className="banner-img">
+            <div className="banner-img" id="EventBanner">
               <Banner></Banner>
             </div>
           </center>
 
-          <div className="event-container">
+          <div className="event-container" id="Events">
             <div className="events">
               <img src={event1} alt="" />
               <img src={event2} alt="" />
@@ -86,7 +136,7 @@ export default function Menu() {
               </p>
             </div>
           </div>
-          <div className="all-nations">
+          <div className="all-nations" id="Nations">
             <div className="nations">
               <img src={mondstadt} />
               <div className="centered-text">Mondstadt</div>
