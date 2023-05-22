@@ -6,6 +6,15 @@ export function FoodSearch({ search, onSearchChange }) {
   const [food, setFood] = useState([]);
   const [foodData, setFoodData] = useState(null);
 
+  const scrollToElement = () => {
+    const targetElement = document.getElementById("scroll");
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth", // Optional: Add smooth scrolling effect
+      });
+    }
+  };
+
   useEffect(() => {
     axios
       .get("https://api.genshin.dev/consumables/food")
@@ -48,7 +57,7 @@ export function FoodSearch({ search, onSearchChange }) {
     onSearchChange({ target: { value: foodName } });
   };
   return (
-    <div className="container">
+    <div className="container" id="scroll">
       {/* Food selection dropdown */}
       <select className="selection" value={search} onChange={onSearchChange}>
         <option value="">Select a food</option>
@@ -80,7 +89,10 @@ export function FoodSearch({ search, onSearchChange }) {
               src={foodItem.image}
               alt={foodItem.name}
               className="food-image"
-              onClick={() => handleImageClick(foodItem.name)}
+              onClick={() => {
+                handleImageClick(foodItem.name);
+                scrollToElement();
+              }}
             />
           ))}
         </div>
