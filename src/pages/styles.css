@@ -406,6 +406,7 @@ input {
   transition: transform 1s, filter 2s ease-in-out;
   filter: blur(2px);
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .nations:hover img {
@@ -465,4 +466,33 @@ input {
 
 .weapon-cards img:hover {
   transform: scale(1.1);
+}
+
+.outer-image {
+  position: relative;
+  display: inline-block;
+}
+
+.inner-image {
+  margin-top: 4vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vw;
+  mask-image: linear-gradient(#000, rgba(0, 0, 0, 0) 100%);
+}
+
+.text-topright {
+  max-width: 50vw;
+  margin-top: 20vw;
+  margin-right: 3vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 2vw;
+  font-family: Genshin;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
 }

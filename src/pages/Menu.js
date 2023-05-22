@@ -15,6 +15,11 @@ export default function Menu() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
+  const [goToFood, setGoToFood] = React.useState(false);
+  const [goToMondstadt, setGoToMondstadt] = React.useState(false);
+  const [goToLiyue, setGoToLiyue] = React.useState(false);
+  const [goToInazuma, setGoToInazuma] = React.useState(false);
+  const [goToSumeru, setGoToSumeru] = React.useState(false);
 
   if (goToCharacter) {
     return <Navigate to="/Character" />;
@@ -26,6 +31,26 @@ export default function Menu() {
 
   if (goToArtifact) {
     return <Navigate to="/Artifact" />;
+  }
+
+  if (goToFood) {
+    return <Navigate to="/Food" />;
+  }
+
+  if (goToMondstadt) {
+    return <Navigate to="/Mondstadt" />;
+  }
+
+  if (goToLiyue) {
+    return <Navigate to="/Liyue" />;
+  }
+
+  if (goToInazuma) {
+    return <Navigate to="/Inazuma" />;
+  }
+
+  if (goToSumeru) {
+    return <Navigate to="/Sumeru" />;
   }
 
   const scrollToPages = () => {
@@ -160,7 +185,12 @@ export default function Menu() {
           </div>
           <div className="all-nations" id="Nations">
             <div className="nations">
-              <img src={mondstadt} />
+              <img
+                src={mondstadt}
+                onClick={() => {
+                  setGoToMondstadt(true);
+                }}
+              />
               <div className="centered-text">Mondstadt</div>
             </div>
             <div className="nations">
