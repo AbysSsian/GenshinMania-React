@@ -204,15 +204,30 @@ export default function Menu() {
               <div className="centered-text">Mondstadt</div>
             </div>
             <div className="nations">
-              <img src={liyue} />
+              <img
+                src={liyue}
+                onClick={() => {
+                  setGoToLiyue(true);
+                }}
+              />
               <div className="centered-text">Liyue</div>
             </div>
             <div className="nations">
-              <img src={inazuma} />
+              <img
+                src={inazuma}
+                onClick={() => {
+                  setGoToInazuma(true);
+                }}
+              />
               <div className="centered-text">Inazuma</div>
             </div>
             <div className="nations">
-              <img src={sumeru} />
+              <img
+                src={sumeru}
+                onClick={() => {
+                  setGoToSumeru(true);
+                }}
+              />
               <div className="centered-text">Sumeru</div>
             </div>
           </div>
