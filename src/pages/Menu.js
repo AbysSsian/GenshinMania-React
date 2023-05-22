@@ -14,6 +14,7 @@ import sumeru from "../assets/sumeru.png";
 export default function Menu() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
+  const [goToArtifact, setGoToArtifact] = React.useState(false);
 
   if (goToCharacter) {
     return <Navigate to="/Character" />;
@@ -21,6 +22,10 @@ export default function Menu() {
 
   if (goToWeapon) {
     return <Navigate to="/Weapon" />;
+  }
+
+  if (goToArtifact) {
+    return <Navigate to="/Artifact" />;
   }
 
   const scrollToPages = () => {
@@ -116,7 +121,13 @@ export default function Menu() {
             >
               Weapons
             </button>
-            <button>Artifacts</button>
+            <button
+              onClick={() => {
+                setGoToArtifact(true);
+              }}
+            >
+              Artifacts
+            </button>
             <button>Material</button>
           </div>
         </div>
