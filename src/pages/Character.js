@@ -10,21 +10,25 @@ export default function Menu() {
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [selectedNation, setSelectedNation] = useState("All");
 
-  const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
+  const [goToFood, setGoToFood] = React.useState(false);
 
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
 
-  if (goToCharacter) {
-    return <Navigate to="/Character" />;
-  }
-
   if (goToWeapon) {
     return <Navigate to="/Weapon" />;
+  }
+
+  if (goToArtifact) {
+    return <Navigate to="/Artifact" />;
+  }
+
+  if (goToFood) {
+    return <Navigate to="/Food" />;
   }
 
   const scrollToElement = () => {
@@ -75,13 +79,7 @@ export default function Menu() {
 
         <div className="sections">
           <div className="button-group">
-            <button
-              onClick={() => {
-                setGoToCharacter(true);
-              }}
-            >
-              Characters
-            </button>
+            <button>Characters</button>
             <button
               onClick={() => {
                 setGoToWeapon(true);
@@ -89,8 +87,20 @@ export default function Menu() {
             >
               Weapons
             </button>
-            <button>Artifacts</button>
-            <button>Material</button>
+            <button
+              onClick={() => {
+                setGoToArtifact(true);
+              }}
+            >
+              Artifacts
+            </button>
+            <button
+              onClick={() => {
+                setGoToFood(true);
+              }}
+            >
+              Food
+            </button>
           </div>
         </div>
         <h2 className="char-archive">Character Archive</h2>

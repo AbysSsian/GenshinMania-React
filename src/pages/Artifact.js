@@ -6,9 +6,9 @@ import icon from "../assets/icon.png";
 
 export default function Artifact() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
-  const [goToArtifact, setGoToArtifact] = React.useState(false);
-  const [goToWeapon, setGoToWeapon] = React.useState(false);
 
+  const [goToWeapon, setGoToWeapon] = React.useState(false);
+  const [goToFood, setGoToFood] = React.useState(false);
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -22,14 +22,9 @@ export default function Artifact() {
     return <Navigate to="/Weapon" />;
   }
 
-  const scrollToElement = () => {
-    const targetElement = document.getElementById("scroll");
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth", // Optional: Add smooth scrolling effect
-      });
-    }
-  };
+  if (goToFood) {
+    return <Navigate to="/Food" />;
+  }
 
   return (
     <html lang="en">
@@ -63,7 +58,13 @@ export default function Artifact() {
               Weapons
             </button>
             <button>Artifacts</button>
-            <button>Material</button>
+            <button
+              onClick={() => {
+                setGoToFood(true);
+              }}
+            >
+              Food
+            </button>
           </div>
         </div>
         <h2 className="char-archive">Artifact Archive</h2>

@@ -157,7 +157,13 @@ export default function Menu() {
             >
               Artifacts
             </button>
-            <button>Material</button>
+            <button
+              onClick={() => {
+                setGoToFood(true);
+              }}
+            >
+              Food
+            </button>
           </div>
         </div>
         <div>
@@ -241,16 +247,16 @@ export default function Menu() {
                 </h3>
               </li>
               <li>
-                <p className="text-left">Character Benner</p>
+                <p className="text-left">Character Banner</p>
               </li>
               <li>
                 <p className="text-left">Ongoing Event</p>
               </li>
               <li>
-                <p className="text-left">Character Arcive</p>
+                <p className="text-left">Character Archive</p>
               </li>
               <li>
-                <p className="text-left">Weapon Arcive</p>
+                <p className="text-left">Weapon Archive</p>
               </li>
             </ul>
           </div>

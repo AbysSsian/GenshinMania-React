@@ -10,7 +10,8 @@ export default function Weapon() {
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
-  const [goToWeapon, setGoToWeapon] = React.useState(false);
+
+  const [goToFood, setGoToFood] = React.useState(false);
 
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
@@ -34,8 +35,12 @@ export default function Weapon() {
     return <Navigate to="/Character" />;
   }
 
-  if (goToWeapon) {
-    return <Navigate to="/Weapon" />;
+  if (goToArtifact) {
+    return <Navigate to="/Artifact" />;
+  }
+
+  if (goToFood) {
+    return <Navigate to="/Food" />;
   }
 
   const handleTypeChange = (event) => {
@@ -78,15 +83,21 @@ export default function Weapon() {
             >
               Characters
             </button>
+            <button>Weapons</button>
             <button
               onClick={() => {
-                setGoToWeapon(true);
+                setGoToArtifact(true);
               }}
             >
-              Weapons
+              Artifacts
             </button>
-            <button>Artifacts</button>
-            <button>Material</button>
+            <button
+              onClick={() => {
+                setGoToFood(true);
+              }}
+            >
+              Food
+            </button>
           </div>
         </div>
         <h2 className="char-archive">Weapon Archive</h2>
