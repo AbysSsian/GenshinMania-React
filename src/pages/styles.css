@@ -277,9 +277,14 @@ video {
 
 .paragraph2 {
   margin-top: 16vw;
+  margin-left: 2vw;
+  color: white;
+
+  font-size: 1.4vw;
+  margin-right: 2vw;
 }
 
-p {
+.paragraph1 {
   margin-left: 2vw;
   color: white;
   margin-top: 10vw;
@@ -287,19 +292,66 @@ p {
   margin-right: 2vw;
 }
 
-footer {
-  margin-top: 3vw;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #33102a;
+.footer {
+  background-image: url(../assets/footerbackground.png),
+    linear-gradient(#000, rgba(0, 0, 0, 0) 100%);
+  background-size: 100%;
+  background-color: #1d0b19;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+  padding-top: 3vw;
+  font-size: 1vw;
+  font-family: Genshin;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.bungkus {
+  padding-top: 0;
+  text-align: right;
+}
+.social-icons img {
+  display: inline;
+  margin-left: 2vw;
+  width: 2vw;
 
-  padding: 3vw;
-  color: #fff;
+  text-align: right;
 }
 
-footer h3 {
-  margin-left: 2vw;
+.google-icon img {
+  text-align: right;
+
+  width: 10vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+}
+
+.text li {
+  list-style: none;
+  padding-bottom: 0.6vw;
+}
+.text2 {
+  text-align: center;
+}
+.text2 li {
+  list-style: none;
+  padding-bottom: 0.6vw;
+}
+
+.text-left {
+  text-align: left;
+  display: flex;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    font-size: 12px;
+  }
 }
 
 /*Search Character*/

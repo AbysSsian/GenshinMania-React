@@ -10,6 +10,10 @@ import mondstadt from "../assets/mondstadt.png";
 import liyue from "../assets/liyue.png";
 import inazuma from "../assets/inazuma.png";
 import sumeru from "../assets/sumeru.png";
+import twich from "../assets/twich.png";
+import discord from "../assets/discord.png";
+import twitter from "../assets/twitter.png";
+import google from "../assets/google.png";
 
 export default function Menu() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
@@ -169,18 +173,18 @@ export default function Menu() {
               <img src={event2} alt="" />
             </div>
             <div className="event-desc">
-              <p>
+              <div className="paragraph1">
                 During the event, help Sorush complete various forms of trials
                 to obtain Primogems, Weapon Ascension Materials, Hero's Wit, and
                 other rewards.
-              </p>
-              <p className="paragraph2">
+              </div>
+              <div className="paragraph2">
                 During the event, Travelers who successfully completed the
                 Talent Level-Up Materials Domains "Forsaken Rift", "Taishan
                 Mansion", "Violet Court", and "Steeple of Ignorance", can claim
                 the rewards by using Original Resin to receive double the
                 rewards. A total of 3 such bonuses will be available each day.
-              </p>
+              </div>
             </div>
           </div>
           <div className="all-nations" id="Nations">
@@ -206,12 +210,87 @@ export default function Menu() {
               <div className="centered-text">Sumeru</div>
             </div>
           </div>
+        </div>
+        <div className="footer">
+          <div className="text">
+            <ul>
+              <li>
+                <h3 className="text-left">
+                  <b>About Us</b>
+                </h3>
+              </li>
+              <li>
+                <div className="text-left">Axel Bryan Bolang</div>
+              </li>
+              <li>
+                <p className="text-left">Arza Vito Hidayat</p>
+              </li>
+              <li>
+                <p className="text-left">Charel Rosabel</p>
+              </li>
+              <li>
+                <p className="text-left">ELisabeth Lauren</p>
+              </li>
+            </ul>
+          </div>
+          <div className="text2">
+            <ul>
+              <li>
+                <h3 className="text-left">
+                  <b>Our Content</b>
+                </h3>
+              </li>
+              <li>
+                <p className="text-left">Character Benner</p>
+              </li>
+              <li>
+                <p className="text-left">Ongoing Event</p>
+              </li>
+              <li>
+                <p className="text-left">Character Arcive</p>
+              </li>
+              <li>
+                <p className="text-left">Weapon Arcive</p>
+              </li>
+            </ul>
+          </div>
 
-          <footer>
-            <div className="”footer-content”">
-              <h3>GenshinMania Footer</h3>
+          <div className="bungkus">
+            <h3>Visit Us</h3>
+            <div className="google-icon">
+              <a
+                href="https://discord.com/servers/genshin-impact-indonesia-761105197372014632"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={google} />
+              </a>
             </div>
-          </footer>
+
+            <div className="social-icons">
+              <a
+                href="https://discord.com/servers/genshin-impact-indonesia-761105197372014632"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={discord} />
+              </a>
+              <a
+                href="https://twitter.com/GenshinImpact?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={twitter} />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={twich} />
+              </a>
+            </div>
+          </div>
         </div>
       </body>
     </html>
