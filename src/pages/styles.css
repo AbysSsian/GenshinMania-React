@@ -42,6 +42,10 @@ h2 {
 
 /*Navbar*/
 
+.navbar {
+  z-index: 101;
+}
+
 .nav {
   background-color: black;
   color: white;
@@ -117,7 +121,7 @@ h2 {
   background-color: #33102a;
   color: whitesmoke;
   font-size: 1.5vw;
-  padding: 10px 20px;
+  padding: 1vw 1vw;
   margin: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -138,14 +142,6 @@ h2 {
 
 .button-group button:hover {
   background-color: #a12b84;
-}
-
-@media only screen and (max-width: 480px) {
-  .button-group button {
-    font-size: 3vw;
-    padding: 1vw 2vw;
-    margin: 3px;
-  }
 }
 
 .char-archive {
@@ -378,7 +374,7 @@ input {
 }
 
 .selection {
-  width: 8vw;
+  width: 14vw;
   border-radius: 5vw;
   margin: 2vw;
   font-size: 1.2vw;
@@ -603,4 +599,12 @@ input {
   font-size: 1.7vw;
   font-family: Genshin;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Additional styles for the sticky navbar */
 }
