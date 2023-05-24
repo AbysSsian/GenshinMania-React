@@ -68,8 +68,12 @@ h2 {
   position: absolute;
   right: 0;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
+}
+
+.icon {
+  margin-top: 0.5vw;
 }
 
 .scroll-elements {
@@ -86,6 +90,12 @@ h2 {
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+
+.scroll-elements img {
+  width: 2vw;
+  height: auto;
+  transform: translateY(25%);
 }
 
 /*Welcome*/
@@ -607,4 +617,26 @@ input {
   left: 0;
   width: 100%;
   /* Additional styles for the sticky navbar */
+}
+
+/* SCrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #38142c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #38142c;
 }

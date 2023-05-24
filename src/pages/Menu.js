@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import videoBg from "../assets/scaramouche-bg.mp4";
 import { Navigate } from "react-router-dom";
@@ -14,8 +14,11 @@ import twich from "../assets/twich.png";
 import discord from "../assets/discord.png";
 import twitter from "../assets/twitter.png";
 import google from "../assets/google.png";
+import backgroundMusic from "../assets/menu.mp3";
+import audioIcon from "../assets/audio-icon.png";
 
 export default function Menu() {
+  const [isPlaying, setIsPlaying] = useState(false);
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
@@ -93,6 +96,10 @@ export default function Menu() {
     }
   };
 
+  const toggleMusic = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <html lang="en">
       <head>
@@ -100,13 +107,19 @@ export default function Menu() {
         <title>GenshinMania</title>
       </head>
       <body>
+        <div className="audio">
+          <audio src={backgroundMusic} autoPlay loop />
+        </div>
         <nav className="nav">
           <a href="/" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>
-          <img src={icon} />
+          <img src={icon} alt="icon" className="icon" />
           <div className="nav-elements">
+            <span className="scroll-elements" onClick={toggleMusic}>
+              <img src={audioIcon} alt="audio" />
+            </span>
             <span className="scroll-elements" onClick={scrollToPages}>
               Pages
             </span>
