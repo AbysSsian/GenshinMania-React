@@ -38,7 +38,7 @@ export default function WeaponSearch({ search, onSearchChange }) {
     <div className="container">
       {/* Character selection */}
       <select className="selection" value={search} onChange={onSearchChange}>
-        <option value="">Select a character</option>
+        <option value="">All Weapons</option>
         {weapons.map((character) => (
           <option key={character} value={character}>
             {character}

@@ -387,10 +387,11 @@ input {
   width: 14vw;
   border-radius: 5vw;
   margin: 2vw;
+  font-family: Genshin;
   font-size: 1.2vw;
   padding: 1vw;
-  color: white;
-  background-color: #0e050c;
+  color: #4b4e56;
+  background-color: #d0c9c1;
 }
 
 .char-name {
@@ -466,6 +467,12 @@ input {
   filter: blur(2px);
   transform: scale(1.2);
   cursor: pointer;
+  mask-image: linear-gradient(
+    270deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(51, 16, 42, 1) 0%,
+    rgba(29, 11, 25, 0) 150%
+  );
 }
 
 .nations:hover img {
@@ -479,7 +486,7 @@ input {
   font-family: Primetime;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
 

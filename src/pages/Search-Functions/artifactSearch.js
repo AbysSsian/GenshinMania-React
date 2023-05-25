@@ -72,7 +72,7 @@ export default function ArtifactSearch({ search, onSearchChange }) {
     <div className="container" id="scroll">
       {/* Artifact selection */}
       <select className="selection" value={search} onChange={onSearchChange}>
-        <option value="">Select an artifact</option>
+        <option value="">All Artifacts</option>
         {artifacts.map((artifact) => (
           <option key={artifact} value={artifact}>
             {artifact}

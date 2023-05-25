@@ -36,7 +36,7 @@ export default function CharacterSearch({ search, onSearchChange }) {
     <div className="container">
       {/* Character selection */}
       <select className="selection" value={search} onChange={onSearchChange}>
-        <option value="">Select a character</option>
+        <option value="">All Characters</option>
         {characters.map((character) => (
           <option key={character} value={character}>
             {character}

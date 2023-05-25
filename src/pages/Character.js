@@ -4,8 +4,11 @@ import { Navigate } from "react-router-dom";
 import CharacterSearch from "./Search-Functions/characterSearch";
 import icon from "../assets/icon.png";
 import charactersData from "./Search-Functions/charactersData";
+import backgroundMusic from "../assets/menu.mp3";
+import audioIcon from "../assets/audio-icon.png";
 
 export default function Menu() {
+  const [isPlaying, setIsPlaying] = useState(false);
   const [selectedElement, setSelectedElement] = useState("All");
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [selectedNation, setSelectedNation] = useState("All");
@@ -17,6 +20,10 @@ export default function Menu() {
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
+  };
+
+  const toggleMusic = () => {
+    setIsPlaying(!isPlaying);
   };
 
   if (goToWeapon) {
@@ -69,12 +76,20 @@ export default function Menu() {
         <title>GenshinMania</title>
       </head>
       <body>
+        <div className="audio">
+          <audio src={backgroundMusic} autoPlay loop />
+        </div>
         <nav className="nav">
           <a href="/" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>
-          <img src={icon} />
+          <img src={icon} className="icon" />
+          <div className="nav-elements">
+            <span className="scroll-elements" onClick={toggleMusic}>
+              <img src={audioIcon} alt="audio" />
+            </span>
+          </div>
         </nav>
 
         <div className="sections">

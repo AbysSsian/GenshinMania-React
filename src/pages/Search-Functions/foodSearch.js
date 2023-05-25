@@ -60,7 +60,7 @@ export function FoodSearch({ search, onSearchChange }) {
     <div className="container" id="scroll">
       {/* Food selection dropdown */}
       <select className="selection" value={search} onChange={onSearchChange}>
-        <option value="">Select a food</option>
+        <option value="">All Foods</option>
         {food.map((foodItem) => (
           <option key={foodItem.id} value={foodItem.name}>
             {foodItem.name}

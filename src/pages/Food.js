@@ -3,8 +3,11 @@ import "./styles.css";
 import { Navigate } from "react-router-dom";
 import { FoodSearch } from "./Search-Functions/foodSearch";
 import icon from "../assets/icon.png";
+import backgroundMusic from "../assets/menu.mp3";
+import audioIcon from "../assets/audio-icon.png";
 
 export default function Food() {
+  const [isPlaying, setIsPlaying] = useState(false);
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
@@ -27,6 +30,10 @@ export default function Food() {
     return <Navigate to="/Artifact" />;
   }
 
+  const toggleMusic = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <html lang="en">
       <head>
@@ -34,12 +41,20 @@ export default function Food() {
         <title>GenshinMania</title>
       </head>
       <body>
+        <div className="audio">
+          <audio src={backgroundMusic} autoPlay loop />
+        </div>
         <nav className="nav">
           <a href="/" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>
-          <img src={icon} />
+          <img src={icon} className="icon" />
+          <div className="nav-elements">
+            <span className="scroll-elements" onClick={toggleMusic}>
+              <img src={audioIcon} alt="audio" />
+            </span>
+          </div>
         </nav>
 
         <div className="sections">

@@ -4,8 +4,11 @@ import { Navigate } from "react-router-dom";
 import icon from "../assets/icon.png";
 import WeaponSearch from "./Search-Functions/weaponSearch";
 import weaponsData from "./Search-Functions/weaponsData";
+import backgroundMusic from "../assets/menu.mp3";
+import audioIcon from "../assets/audio-icon.png";
 
 export default function Weapon() {
+  const [isPlaying, setIsPlaying] = useState(false);
   const [selectedType, setSelectedType] = useState("All");
   const [selectedRarity, setSelectedRarity] = useState("All");
   const [goToCharacter, setGoToCharacter] = React.useState(false);
@@ -59,6 +62,10 @@ export default function Weapon() {
     return isTypeMatch && isRarityMatch;
   });
 
+  const toggleMusic = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <html lang="en">
       <head>
@@ -66,12 +73,20 @@ export default function Weapon() {
         <title>GenshinMania</title>
       </head>
       <body>
+        <div className="audio">
+          <audio src={backgroundMusic} autoPlay loop />
+        </div>
         <nav className="nav">
           <a href="/" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>
-          <img src={icon} />
+          <img src={icon} className="icon" />
+          <div className="nav-elements">
+            <span className="scroll-elements" onClick={toggleMusic}>
+              <img src={audioIcon} alt="audio" />
+            </span>
+          </div>
         </nav>
 
         <div className="sections">
@@ -134,8 +149,7 @@ export default function Weapon() {
                   <option value="Claymore">Claymore</option>
                   {/* Add more weapon types here */}
                 </select>
-              </div>
-              <div>
+
                 <label htmlFor="rarity-select" className="label">
                   Rarity:
                 </label>
