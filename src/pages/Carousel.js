@@ -7,17 +7,17 @@ const images = [
   {
     label: "image 1",
     alt: "image1",
-    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/04/27/0f3aded8ca018c6140d98fcad6dfe1b8_6387881284674606347.jpg",
+    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/05/22/e10a697a32196d3d05e08d76d52bdbae_4787505608920387824.png",
   },
   {
     label: "image 2",
     alt: "image2",
-    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/04/27/3f56f7f49b04235798875feeef266a51_2418161583024609387.jpg",
+    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/05/22/0370e0d921cf5bae96083a4d2cd6b4f8_7044895680673227774.png",
   },
   {
     label: "image 3",
     alt: "image3",
-    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/04/27/d0dca7f8a40346485900c511a0d5a8bf_8221120445015561654.jpg",
+    url: "https://webstatic.hoyoverse.com/upload/op-public/2023/05/22/a9ddcac7b0ee53f3ce843ed2cccbadc4_1662299043594752880.png",
   },
 ];
 

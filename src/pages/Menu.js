@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import videoBg from "../assets/scaramouche-bg.mp4";
 import { Navigate } from "react-router-dom";
 import icon from "../assets/icon.png";
-import event1 from "../assets/recollectors-path.png";
-import event2 from "../assets/overflowing-mastery.png";
+import event1 from "../assets/hilichurl-event.png";
+import event2 from "../assets/promise-event.jpg";
 import Banner from "./Carousel";
 import mondstadt from "../assets/mondstadt.png";
 import liyue from "../assets/liyue.png";
@@ -16,9 +16,12 @@ import twitter from "../assets/twitter.png";
 import google from "../assets/google.png";
 import backgroundMusic from "../assets/menu.mp3";
 import audioIcon from "../assets/audio-icon.png";
+import informationIcon from "../assets/information-icon.png";
+import genshinmaniaIcon from "../assets/genshinmania.png";
+import uparrow from "../assets/uparrow.png";
 
 export default function Menu() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
@@ -27,6 +30,7 @@ export default function Menu() {
   const [goToLiyue, setGoToLiyue] = React.useState(false);
   const [goToInazuma, setGoToInazuma] = React.useState(false);
   const [goToSumeru, setGoToSumeru] = React.useState(false);
+  const audio = new Audio(backgroundMusic);
 
   if (goToCharacter) {
     return <Navigate to="/Character" />;
@@ -97,7 +101,30 @@ export default function Menu() {
   };
 
   const toggleMusic = () => {
-    setIsPlaying(!isPlaying);
+    if (isMusicPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsMusicPlaying(!isMusicPlaying);
+  };
+
+  const redirectToEvent1 = () => {
+    window.open(
+      "https://act.hoyolab.com/puzzle/bbs/pz_piCJiKMQnV/index.html?game_biz=bbs_oversea&hyl_presentation_style=fullscreen&hyl_auth_required=true&utm_id=2&utm_medium=banner&utm_source=hoyolab&lang=en-us&bbs_theme=dark&bbs_theme_device=1",
+      "_blank"
+    );
+  };
+
+  const redirectToEvent2 = () => {
+    window.open("https://hoyo.link/0bDuCGAd", "_blank");
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -107,33 +134,36 @@ export default function Menu() {
         <title>GenshinMania</title>
       </head>
       <body>
-        <div className="audio">
-          <audio src={backgroundMusic} autoPlay loop />
+        <div className="navbar">
+          <nav className="nav">
+            <a href="/" className="site-title">
+              {" "}
+              GenshinMania{" "}
+            </a>
+            <img src={icon} alt="icon" className="icon" />
+            <div className="nav-elements">
+              <span className="scroll-elements" onClick={toggleMusic}>
+                <img src={informationIcon} alt="info" />
+              </span>
+              <span className="scroll-elements" onClick={toggleMusic}>
+                <img src={audioIcon} alt="audio" />
+              </span>
+
+              <span className="scroll-elements" onClick={scrollToPages}>
+                Pages
+              </span>
+              <span className="scroll-elements" onClick={scrollToEventBanner}>
+                Event Banner
+              </span>
+              <span className="scroll-elements" onClick={scrollToEvents}>
+                Events
+              </span>
+              <span className="scroll-elements" onClick={scrollToNations}>
+                Nations
+              </span>
+            </div>
+          </nav>
         </div>
-        <nav className="nav">
-          <a href="/" className="site-title">
-            {" "}
-            GenshinMania{" "}
-          </a>
-          <img src={icon} alt="icon" className="icon" />
-          <div className="nav-elements">
-            <span className="scroll-elements" onClick={toggleMusic}>
-              <img src={audioIcon} alt="audio" />
-            </span>
-            <span className="scroll-elements" onClick={scrollToPages}>
-              Pages
-            </span>
-            <span className="scroll-elements" onClick={scrollToEventBanner}>
-              Event Banner
-            </span>
-            <span className="scroll-elements" onClick={scrollToEvents}>
-              Events
-            </span>
-            <span className="scroll-elements" onClick={scrollToNations}>
-              Nations
-            </span>
-          </div>
-        </nav>
         <div className="video">
           <video src={videoBg} autoPlay loop />
         </div>
@@ -188,22 +218,10 @@ export default function Menu() {
 
           <div className="event-container" id="Events">
             <div className="events">
-              <img src={event1} alt="" />
-              <img src={event2} alt="" />
-            </div>
-            <div className="event-desc">
-              <div className="paragraph1">
-                During the event, help Sorush complete various forms of trials
-                to obtain Primogems, Weapon Ascension Materials, Hero's Wit, and
-                other rewards.
-              </div>
-              <div className="paragraph2">
-                During the event, Travelers who successfully completed the
-                Talent Level-Up Materials Domains "Forsaken Rift", "Taishan
-                Mansion", "Violet Court", and "Steeple of Ignorance", can claim
-                the rewards by using Original Resin to receive double the
-                rewards. A total of 3 such bonuses will be available each day.
-              </div>
+              <center>
+                <img src={event1} alt="event1" onClick={redirectToEvent1} />
+                <img src={event2} alt="event1" onClick={redirectToEvent2} />
+              </center>
             </div>
           </div>
           <div className="all-nations" id="Nations">
@@ -250,27 +268,6 @@ export default function Menu() {
             <ul>
               <li>
                 <h3 className="text-left">
-                  <b>About Us</b>
-                </h3>
-              </li>
-              <li>
-                <div className="text-left">Axel Bryan Bolang</div>
-              </li>
-              <li>
-                <p className="text-left">Arza Vito Hidayat</p>
-              </li>
-              <li>
-                <p className="text-left">Charel Rosabel</p>
-              </li>
-              <li>
-                <p className="text-left">ELisabeth Lauren</p>
-              </li>
-            </ul>
-          </div>
-          <div className="text2">
-            <ul>
-              <li>
-                <h3 className="text-left">
                   <b>Our Content</b>
                 </h3>
               </li>
@@ -285,6 +282,21 @@ export default function Menu() {
               </li>
               <li>
                 <p className="text-left">Weapon Archive</p>
+              </li>
+              <li>
+                <p className="text-left">Nations</p>
+              </li>
+            </ul>
+          </div>
+          <div className="text2">
+            <ul>
+              <li className="arrow">
+                <img src={uparrow} alt="arrow" onClick={scrollToTop} />
+              </li>
+              <li>
+                <h3 className="text-left">
+                  <img src={genshinmaniaIcon} alt="logo" />
+                </h3>
               </li>
             </ul>
           </div>

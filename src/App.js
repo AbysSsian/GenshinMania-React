@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
 import Menu from "./pages/Menu";
 import Character from "./pages/Character";
 import Weapon from "./pages/Weapon";
@@ -10,6 +11,10 @@ import Inazuma from "./pages/Inazuma";
 import Sumeru from "./pages/Sumeru";
 
 export default function App() {
+  useEffect(() => {
+    document.title = "GenshinMania";
+  }, []);
+
   return (
     <div>
       <BrowserRouter>
