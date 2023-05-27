@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import videoBg from "../assets/scaramouche-bg.mp4";
 import { Navigate } from "react-router-dom";
@@ -30,6 +30,7 @@ export default function Menu() {
   const [goToLiyue, setGoToLiyue] = React.useState(false);
   const [goToInazuma, setGoToInazuma] = React.useState(false);
   const [goToSumeru, setGoToSumeru] = React.useState(false);
+  const [goToAbout, setGoToAbout] = React.useState(false);
   const audio = new Audio(backgroundMusic);
 
   if (goToCharacter) {
@@ -62,6 +63,10 @@ export default function Menu() {
 
   if (goToSumeru) {
     return <Navigate to="/Sumeru" />;
+  }
+
+  if (goToAbout) {
+    return <Navigate to="/About" />;
   }
 
   const scrollToPages = () => {
@@ -142,8 +147,14 @@ export default function Menu() {
             </a>
             <img src={icon} alt="icon" className="icon" />
             <div className="nav-elements">
-              <span className="scroll-elements" onClick={toggleMusic}>
-                <img src={informationIcon} alt="info" />
+              <span className="scroll-elements">
+                <img
+                  src={informationIcon}
+                  alt="info"
+                  onClick={() => {
+                    setGoToAbout(true);
+                  }}
+                />
               </span>
               <span className="scroll-elements" onClick={toggleMusic}>
                 <img src={audioIcon} alt="audio" />

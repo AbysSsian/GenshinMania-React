@@ -9,6 +9,7 @@ import Mondstadt from "./pages/Mondstadt";
 import Liyue from "./pages/Liyue";
 import Inazuma from "./pages/Inazuma";
 import Sumeru from "./pages/Sumeru";
+import About from "./pages/About";
 
 export default function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/Liyue" element={<Liyue />} />
           <Route path="/Inazuma" element={<Inazuma />} />
           <Route path="/Sumeru" element={<Sumeru />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
