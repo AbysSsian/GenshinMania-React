@@ -15,6 +15,7 @@ export default function Weapon() {
   const [goToArtifact, setGoToArtifact] = React.useState(false);
 
   const [goToFood, setGoToFood] = React.useState(false);
+  const [goToMenu, setGoToMenu] = React.useState(false);
 
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
@@ -44,6 +45,10 @@ export default function Weapon() {
 
   if (goToFood) {
     return <Navigate to="/Food" />;
+  }
+
+  if (goToMenu) {
+    return <Navigate to="/Menu" />;
   }
 
   const handleTypeChange = (event) => {
@@ -77,10 +82,14 @@ export default function Weapon() {
           <audio src={backgroundMusic} autoPlay loop />
         </div>
         <nav className="nav">
-          <a href="/Menu" className="site-title">
-            {" "}
-            GenshinMania{" "}
-          </a>
+          <div
+            className="site-title"
+            onClick={() => {
+              setGoToMenu(true);
+            }}
+          >
+            GenshinMania
+          </div>
           <img src={icon} className="icon" />
           <div className="nav-elements">
             <span className="scroll-elements" onClick={toggleMusic}>

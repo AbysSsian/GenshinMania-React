@@ -38,6 +38,7 @@ h2 {
 .site-title {
   font-family: PrimeTime;
   font-size: 2.5vw;
+  cursor: pointer;
 }
 
 /*Navbar*/

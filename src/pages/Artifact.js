@@ -12,6 +12,7 @@ export default function Artifact() {
 
   const [goToWeapon, setGoToWeapon] = React.useState(false);
   const [goToFood, setGoToFood] = React.useState(false);
+  const [goToMenu, setGoToMenu] = React.useState(false);
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -33,6 +34,10 @@ export default function Artifact() {
     return <Navigate to="/Food" />;
   }
 
+  if (goToMenu) {
+    return <Navigate to="/Menu" />;
+  }
+
   return (
     <html lang="en">
       <head>
@@ -44,10 +49,14 @@ export default function Artifact() {
           <audio src={backgroundMusic} autoPlay loop />
         </div>
         <nav className="nav">
-          <a href="/Menu" className="site-title">
-            {" "}
-            GenshinMania{" "}
-          </a>
+          <div
+            className="site-title"
+            onClick={() => {
+              setGoToMenu(true);
+            }}
+          >
+            GenshinMania
+          </div>
 
           <img src={icon} className="icon" />
           <div className="nav-elements">

@@ -5,16 +5,28 @@ import bryan from "../assets/bryan.png";
 import vito from "../assets/vito.png";
 import rosabel from "../assets/rosabel.png";
 import lauren from "../assets/lauren.png";
+import React from "react";
+import { Navigate } from "react-router-dom";
 
 export default function About() {
+  const [goToMenu, setGoToMenu] = React.useState(false);
+
+  if (goToMenu) {
+    return <Navigate to="/Menu" />;
+  }
+
   return (
     <body>
       <div className="navbar">
         <nav className="nav">
-          <a href="/Menu" className="site-title">
-            {" "}
-            GenshinMania{" "}
-          </a>
+          <div
+            className="site-title"
+            onClick={() => {
+              setGoToMenu(true);
+            }}
+          >
+            GenshinMania
+          </div>
           <img src={icon} className="icon" />
           <div className="nav-elements"></div>
         </nav>

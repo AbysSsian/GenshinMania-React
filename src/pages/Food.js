@@ -11,6 +11,7 @@ export default function Food() {
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
+  const [goToMenu, setGoToMenu] = React.useState(false);
 
   const [search, setSearch] = useState("");
   const handleSearchChange = (event) => {
@@ -30,6 +31,10 @@ export default function Food() {
     return <Navigate to="/Artifact" />;
   }
 
+  if (goToMenu) {
+    return <Navigate to="/Menu" />;
+  }
+
   const toggleMusic = () => {
     setIsPlaying(!isPlaying);
   };
@@ -45,10 +50,14 @@ export default function Food() {
           <audio src={backgroundMusic} autoPlay loop />
         </div>
         <nav className="nav">
-          <a href="/Menu" className="site-title">
-            {" "}
-            GenshinMania{" "}
-          </a>
+          <div
+            className="site-title"
+            onClick={() => {
+              setGoToMenu(true);
+            }}
+          >
+            GenshinMania
+          </div>
           <img src={icon} className="icon" />
           <div className="nav-elements">
             <span className="scroll-elements" onClick={toggleMusic}>

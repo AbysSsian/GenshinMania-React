@@ -1,15 +1,27 @@
 import "./styles.css";
 import videoBg from "../assets/inazuma-live.mp4";
 import icon from "../assets/icon.png";
+import React from "react";
+import { Navigate } from "react-router-dom";
 
 export default function Inazuma() {
+  const [goToMenu, setGoToMenu] = React.useState(false);
+
+  if (goToMenu) {
+    return <Navigate to="/Menu" />;
+  }
+
   return (
     <body>
       <nav className="nav">
-        <a href="/Menu" className="site-title">
-          {" "}
-          GenshinMania{" "}
-        </a>
+        <div
+          className="site-title"
+          onClick={() => {
+            setGoToMenu(true);
+          }}
+        >
+          GenshinMania
+        </div>
         <img src={icon} />
       </nav>
       <div className="video">
