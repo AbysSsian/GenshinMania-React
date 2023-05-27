@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import Menu from "./pages/Menu";
 import Character from "./pages/Character";
@@ -21,6 +21,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Menu />} />
+          <Route path="/" element={<Menu />} />
+          <Route path="/genshinmania" element={<Menu />} />
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Character" element={<Character />} />
           <Route path="/Weapon" element={<Weapon />} />

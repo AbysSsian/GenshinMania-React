@@ -45,7 +45,7 @@ export default function About() {
         </center>
       </div>
 
-      <div className="main">
+      <div className="main-info">
         <div className="profile">
           <img src={vito} alt="Arza Vito Hidayat" />
           <div className="names">Arza Vito Hidayat</div>

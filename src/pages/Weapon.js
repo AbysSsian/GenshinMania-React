@@ -178,7 +178,7 @@ export default function Weapon() {
                 }}
               >
                 <img
-                  src={`./weapons/${weapon.name}.webp`}
+                  src={require(`../../public/weapons/${weapon.name}.webp`)}
                   width="50"
                   height="50"
                 />
