@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/genshinmania/static/css/main.f7b0a246.css",
-    "main.js": "/genshinmania/static/js/main.8cdeb23b.js",
+    "main.js": "/genshinmania/static/js/main.ed533524.js",
     "static/media/mondstadt-live.mp4": "/genshinmania/static/media/mondstadt-live.97eaede48c65b6254863.mp4",
     "static/media/liyue-live.mp4": "/genshinmania/static/media/liyue-live.2e380a9a038476c22024.mp4",
     "static/media/genshinfont.ttf": "/genshinmania/static/media/genshinfont.043193e9138e69762425.ttf",
@@ -167,10 +167,10 @@
     "static/media/discord.png": "/genshinmania/static/media/discord.667df059ddf407979d68.png",
     "index.html": "/genshinmania/index.html",
     "main.f7b0a246.css.map": "/genshinmania/static/css/main.f7b0a246.css.map",
-    "main.8cdeb23b.js.map": "/genshinmania/static/js/main.8cdeb23b.js.map"
+    "main.ed533524.js.map": "/genshinmania/static/js/main.ed533524.js.map"
   },
   "entrypoints": [
     "static/css/main.f7b0a246.css",
-    "static/js/main.8cdeb23b.js"
+    "static/js/main.ed533524.js"
   ]
 }
