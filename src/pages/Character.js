@@ -80,7 +80,7 @@ export default function Menu() {
           <audio src={backgroundMusic} autoPlay loop />
         </div>
         <nav className="nav">
-          <a href="/" className="site-title">
+          <a href="/Menu" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>

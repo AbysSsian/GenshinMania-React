@@ -6,7 +6,7 @@ export default function Mondstadt() {
   return (
     <body>
       <nav className="nav">
-        <a href="/" className="site-title">
+        <a href="/Menu" className="site-title">
           {" "}
           GenshinMania{" "}
         </a>

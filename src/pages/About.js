@@ -11,7 +11,7 @@ export default function About() {
     <body>
       <div className="navbar">
         <nav className="nav">
-          <a href="/" className="site-title">
+          <a href="/Menu" className="site-title">
             {" "}
             GenshinMania{" "}
           </a>

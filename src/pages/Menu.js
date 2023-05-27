@@ -141,7 +141,7 @@ export default function Menu() {
       <body>
         <div className="navbar">
           <nav className="nav">
-            <a href="/" className="site-title">
+            <a href="/Menu" className="site-title">
               {" "}
               GenshinMania{" "}
             </a>

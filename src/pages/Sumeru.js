@@ -7,7 +7,7 @@ export default function Sumeru() {
   return (
     <body>
       <nav className="nav">
-        <a href="/" className="site-title">
+        <a href="/Menu" className="site-title">
           {" "}
           GenshinMania{" "}
         </a>
