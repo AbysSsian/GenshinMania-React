@@ -31,7 +31,6 @@ export default function Menu() {
   const [goToInazuma, setGoToInazuma] = React.useState(false);
   const [goToSumeru, setGoToSumeru] = React.useState(false);
   const [goToAbout, setGoToAbout] = React.useState(false);
-  const [goToMenu, setGoToMenu] = React.useState(false);
   const audio = new Audio(backgroundMusic);
 
   if (goToCharacter) {
@@ -68,10 +67,6 @@ export default function Menu() {
 
   if (goToAbout) {
     return <Navigate to="/About" />;
-  }
-
-  if (goToMenu) {
-    return <Navigate to="/Menu" />;
   }
 
   const scrollToPages = () => {
@@ -146,14 +141,7 @@ export default function Menu() {
       <body>
         <div className="navbar">
           <nav className="nav">
-            <div
-              className="site-title"
-              onClick={() => {
-                setGoToMenu(true);
-              }}
-            >
-              GenshinMania
-            </div>
+            <div className="site-title">GenshinMania</div>
             <img src={icon} alt="icon" className="icon" />
             <div className="nav-elements">
               <span className="scroll-elements">

@@ -315,6 +315,7 @@ video {
 .bungkus {
   padding-top: 0;
   text-align: right;
+  font-size: 1vw;
 }
 .social-icons img {
   display: inline;
@@ -347,6 +348,11 @@ video {
 .text-left {
   text-align: left;
   display: flex;
+  font-size: 1vw;
+}
+
+.text-left img {
+  width: 20vw;
 }
 
 .text-right {
