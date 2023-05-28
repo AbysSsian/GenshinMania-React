@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/genshinmania/static/css/main.c7ca43f5.css",
-    "main.js": "/genshinmania/static/js/main.0d048ea2.js",
+    "main.css": "/genshinmania/static/css/main.60d96620.css",
+    "main.js": "/genshinmania/static/js/main.99466885.js",
     "static/media/mondstadt-live.mp4": "/genshinmania/static/media/mondstadt-live.97eaede48c65b6254863.mp4",
     "static/media/liyue-live.mp4": "/genshinmania/static/media/liyue-live.2e380a9a038476c22024.mp4",
     "static/media/genshinfont.ttf": "/genshinmania/static/media/genshinfont.043193e9138e69762425.ttf",
@@ -10,6 +10,10 @@
     "static/media/scaramouche-bg.mp4": "/genshinmania/static/media/scaramouche-bg.42a531071fcadaeea31e.mp4",
     "static/media/hilichurl-event.png": "/genshinmania/static/media/hilichurl-event.04161a1eee2fca70e3d4.png",
     "static/media/nahida.png": "/genshinmania/static/media/nahida.9d24a5b4a59bd033afeb.png",
+    "static/media/sumeru-bgm.mp3": "/genshinmania/static/media/sumeru-bgm.7282062034cdf783e2b1.mp3",
+    "static/media/liyue-bgm.mp3": "/genshinmania/static/media/liyue-bgm.ecc1515ee3744f502090.mp3",
+    "static/media/inazuma-bgm.mp3": "/genshinmania/static/media/inazuma-bgm.d477f6b145c89c05efea.mp3",
+    "static/media/mondstadt-bgm.mp3": "/genshinmania/static/media/mondstadt-bgm.ff2e55174b844133ca0c.mp3",
     "static/media/menu.mp3": "/genshinmania/static/media/menu.ee8ed07be33de437f064.mp3",
     "static/media/liyue.png": "/genshinmania/static/media/liyue.16e13838c60892a7b180.png",
     "static/media/inazuma.png": "/genshinmania/static/media/inazuma.796bc0daff87445e9139.png",
@@ -166,11 +170,11 @@
     "static/media/uparrow.png": "/genshinmania/static/media/uparrow.5b3bbf4d8b07045810a6.png",
     "static/media/discord.png": "/genshinmania/static/media/discord.667df059ddf407979d68.png",
     "index.html": "/genshinmania/index.html",
-    "main.c7ca43f5.css.map": "/genshinmania/static/css/main.c7ca43f5.css.map",
-    "main.0d048ea2.js.map": "/genshinmania/static/js/main.0d048ea2.js.map"
+    "main.60d96620.css.map": "/genshinmania/static/css/main.60d96620.css.map",
+    "main.99466885.js.map": "/genshinmania/static/js/main.99466885.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7ca43f5.css",
-    "static/js/main.0d048ea2.js"
+    "static/css/main.60d96620.css",
+    "static/js/main.99466885.js"
   ]
 }
