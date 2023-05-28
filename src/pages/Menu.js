@@ -314,7 +314,7 @@ export default function Menu() {
             <h3>Visit Us</h3>
             <div className="google-icon">
               <a
-                href="https://discord.com/servers/genshin-impact-indonesia-761105197372014632"
+                href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=US&pli=1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -338,7 +338,7 @@ export default function Menu() {
                 <img src={twitter} />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.twitch.tv/genshinimpactofficial/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
