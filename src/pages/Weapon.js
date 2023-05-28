@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./styles.css";
 import { Navigate } from "react-router-dom";
 import icon from "../assets/icon.png";
@@ -18,6 +18,7 @@ export default function Weapon() {
   const [goToMenu, setGoToMenu] = React.useState(false);
 
   const [search, setSearch] = useState("");
+  const audioRef = useRef(null);
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
@@ -67,7 +68,12 @@ export default function Weapon() {
     return isTypeMatch && isRarityMatch;
   });
 
-  const toggleMusic = () => {
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
     setIsPlaying(!isPlaying);
   };
 
@@ -78,9 +84,7 @@ export default function Weapon() {
         <title>GenshinMania</title>
       </head>
       <body>
-        <div className="audio">
-          <audio src={backgroundMusic} autoPlay loop />
-        </div>
+        <audio ref={audioRef} src={backgroundMusic} />
         <nav className="nav">
           <div
             className="site-title"
@@ -92,7 +96,7 @@ export default function Weapon() {
           </div>
           <img src={icon} className="icon" />
           <div className="nav-elements">
-            <span className="scroll-elements" onClick={toggleMusic}>
+            <span className="scroll-elements" onClick={togglePlay}>
               <img src={audioIcon} alt="audio" />
             </span>
           </div>

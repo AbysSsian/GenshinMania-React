@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./styles.css";
 import videoBg from "../assets/scaramouche-bg.mp4";
 import { Navigate } from "react-router-dom";
@@ -21,7 +21,7 @@ import genshinmaniaIcon from "../assets/genshinmania.png";
 import uparrow from "../assets/uparrow.png";
 
 export default function Menu() {
-  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [goToCharacter, setGoToCharacter] = React.useState(false);
   const [goToWeapon, setGoToWeapon] = React.useState(false);
   const [goToArtifact, setGoToArtifact] = React.useState(false);
@@ -31,7 +31,7 @@ export default function Menu() {
   const [goToInazuma, setGoToInazuma] = React.useState(false);
   const [goToSumeru, setGoToSumeru] = React.useState(false);
   const [goToAbout, setGoToAbout] = React.useState(false);
-  const audio = new Audio(backgroundMusic);
+  const audioRef = useRef(null);
 
   if (goToCharacter) {
     return <Navigate to="/Character" />;
@@ -105,13 +105,13 @@ export default function Menu() {
     }
   };
 
-  const toggleMusic = () => {
-    if (isMusicPlaying) {
-      audio.pause();
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
     } else {
-      audio.play();
+      audioRef.current.play();
     }
-    setIsMusicPlaying(!isMusicPlaying);
+    setIsPlaying(!isPlaying);
   };
 
   const redirectToEvent1 = () => {
@@ -153,7 +153,8 @@ export default function Menu() {
                   }}
                 />
               </span>
-              <span className="scroll-elements" onClick={toggleMusic}>
+              <audio ref={audioRef} src={backgroundMusic} autoPlay />
+              <span className="scroll-elements" onClick={togglePlay}>
                 <img src={audioIcon} alt="audio" />
               </span>
 

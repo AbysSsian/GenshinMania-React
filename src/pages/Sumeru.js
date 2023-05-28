@@ -4,6 +4,7 @@ import icon from "../assets/icon.png";
 import nahida from "../assets/nahida.png";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import bgm from "../assets/sumeru-bgm.mp3";
 
 export default function Sumeru() {
   const [goToMenu, setGoToMenu] = React.useState(false);
@@ -13,6 +14,7 @@ export default function Sumeru() {
   }
   return (
     <body>
+      <audio src={bgm} autoPlay loop />
       <nav className="nav">
         <div
           className="site-title"
@@ -25,7 +27,7 @@ export default function Sumeru() {
         <img src={icon} />
       </nav>
       <div className="video">
-        <video src={videoBg} autoPlay loop className="outer-image" />
+        <video src={videoBg} autoPlay loop muted className="outer-image" />
       </div>
 
       <img src={nahida} className="inner-image-nahida" />

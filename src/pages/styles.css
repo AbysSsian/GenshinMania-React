@@ -785,3 +785,7 @@ input {
   width: 24px;
   height: 24px;
 }
+
+.audio-button {
+  border: 20px;
+}

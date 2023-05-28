@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./styles.css";
 import { Navigate } from "react-router-dom";
 import ArtifactSearch from "./Search-Functions/artifactSearch";
@@ -14,11 +14,17 @@ export default function Artifact() {
   const [goToFood, setGoToFood] = React.useState(false);
   const [goToMenu, setGoToMenu] = React.useState(false);
   const [search, setSearch] = useState("");
+  const audioRef = useRef(null);
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
 
-  const toggleMusic = () => {
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
     setIsPlaying(!isPlaying);
   };
 
@@ -45,9 +51,7 @@ export default function Artifact() {
         <title>GenshinMania</title>
       </head>
       <body>
-        <div className="audio">
-          <audio src={backgroundMusic} autoPlay loop />
-        </div>
+        <audio ref={audioRef} src={backgroundMusic} />
         <nav className="nav">
           <div
             className="site-title"
@@ -60,7 +64,7 @@ export default function Artifact() {
 
           <img src={icon} className="icon" />
           <div className="nav-elements">
-            <span className="scroll-elements" onClick={toggleMusic}>
+            <span className="scroll-elements" onClick={togglePlay}>
               <img src={audioIcon} alt="audio" />
             </span>
           </div>

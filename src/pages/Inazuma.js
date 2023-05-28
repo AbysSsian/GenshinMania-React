@@ -3,6 +3,7 @@ import videoBg from "../assets/inazuma-live.mp4";
 import icon from "../assets/icon.png";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import bgm from "../assets/inazuma-bgm.mp3";
 
 export default function Inazuma() {
   const [goToMenu, setGoToMenu] = React.useState(false);
@@ -13,6 +14,7 @@ export default function Inazuma() {
 
   return (
     <body>
+      <audio src={bgm} autoPlay loop />
       <nav className="nav">
         <div
           className="site-title"
@@ -25,9 +27,8 @@ export default function Inazuma() {
         <img src={icon} />
       </nav>
       <div className="video">
-        <video src={videoBg} autoPlay loop className="outer-image" />
+        <video src={videoBg} autoPlay loop muted className="outer-image" />
       </div>
-
       <img
         src={`https://api.genshin.dev/characters/raiden/portrait`}
         className="inner-image"

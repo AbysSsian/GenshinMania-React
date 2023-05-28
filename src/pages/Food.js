@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./styles.css";
 import { Navigate } from "react-router-dom";
 import { FoodSearch } from "./Search-Functions/foodSearch";
@@ -14,6 +14,7 @@ export default function Food() {
   const [goToMenu, setGoToMenu] = React.useState(false);
 
   const [search, setSearch] = useState("");
+  const audioRef = useRef(null);
   const handleSearchChange = (event) => {
     const selectedFood = event.target.value;
     setSearch(selectedFood);
@@ -35,7 +36,12 @@ export default function Food() {
     return <Navigate to="/Menu" />;
   }
 
-  const toggleMusic = () => {
+  const togglePlay = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
     setIsPlaying(!isPlaying);
   };
 
@@ -46,9 +52,7 @@ export default function Food() {
         <title>GenshinMania</title>
       </head>
       <body>
-        <div className="audio">
-          <audio src={backgroundMusic} autoPlay loop />
-        </div>
+        <audio ref={audioRef} src={backgroundMusic} />
         <nav className="nav">
           <div
             className="site-title"
@@ -60,7 +64,7 @@ export default function Food() {
           </div>
           <img src={icon} className="icon" />
           <div className="nav-elements">
-            <span className="scroll-elements" onClick={toggleMusic}>
+            <span className="scroll-elements" onClick={togglePlay}>
               <img src={audioIcon} alt="audio" />
             </span>
           </div>
