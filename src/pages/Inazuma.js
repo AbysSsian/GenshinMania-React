@@ -36,10 +36,11 @@ export default function Inazuma() {
       <div class="text-topright-inazuma">
         <p>
           The City of Eternity.
+          <br />
           <br /> An Isolated Archipelago Far East of Teyvat Overcome endless
           thunderstorms and set foot on the islands of red maple and cherry
           blossoms. On winding shores and towering cliffs, and in forests and
-          mountains full of secrets, witness the Eternity pursued by Her
+          mountains full <br /> of secrets, witness the Eternity pursued by Her
           Excellency, the Almighty Narukami Ogosho.
         </p>
       </div>

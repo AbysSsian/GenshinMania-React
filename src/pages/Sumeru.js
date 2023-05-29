@@ -34,12 +34,14 @@ export default function Sumeru() {
       <div class="text-topright-sumeru">
         <p>
           The City of Wisdom.
-          <br /> The city of scholars located in the west-central part of
-          Teyvat. A fantastical nation of both lush rainforest and barren
-          desert, where countless fruits of wisdom grow and are buried. Whether
-          Travelers travel from afar through the forest to reach the academy
-          city or delve deep into the desert to discover the historical ruins of
-          the red desert, a wealth of valuable knowledge awaits them here.
+          <br /> <br /> The city of scholars located in the west-central
+          <br /> part of Teyvat. A fantastical nation of both lush rainforest
+          and barren desert, where countless <br /> fruits of wisdom grow and
+          are buried. Whether Travelers travel from afar through the forest to
+          reach the academy city or delve deep into the
+          <br /> desert to discover the historical ruins of the
+          <br /> red desert, a wealth of valuable knowledge <br /> awaits them
+          here.
         </p>
       </div>
     </body>

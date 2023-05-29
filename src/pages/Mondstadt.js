@@ -37,6 +37,7 @@ export default function Mondstadt() {
       <div class="text-topright">
         <p>
           The City of Freedom.
+          <br />
           <br /> A city of freedom that lies in the northeast of Teyvat. From
           amongst mountains and wide-open plains, carefree breezes carry the
           scent of dandelions — a gift from the Anemo God, Barbatos — across
