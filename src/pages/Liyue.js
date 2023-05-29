@@ -37,6 +37,7 @@ export default function Liyue() {
       <div class="text-topright-liyue">
         <p>
           The City of Contracts.
+          <br />
           <br /> A bountiful harbor that lies in the east of Teyvat. Mountains
           stand tall and proud alongside the stone forest, that, together with
           the open plains and lively rivers, make up Liyue's bountiful

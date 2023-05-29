@@ -48,7 +48,7 @@ export default function About() {
           <h1>About Us</h1>
           <div className="about-info">
             This website's function is to serve as a manual for the Genshin
-            Impact game. help simplify the process of gamers learning more about
+            Impact game, help simplify the process of gamers learning more about
             the game's characters, artifacts, weapons, and food. Additionally,
             there are several tools that make it simpler for users to do
             specific searches, giving people who aren't game players a clear
