@@ -107,7 +107,11 @@ export default function Artifact() {
               onChange={handleSearchChange}
             />
           </div>
-          <ArtifactSearch search={search} onSearchChange={handleSearchChange} />
+          <ArtifactSearch
+            search={search}
+            onSearchChange={handleSearchChange}
+            className="character-card"
+          />
         </div>
 
         <div className="character-cards"></div>

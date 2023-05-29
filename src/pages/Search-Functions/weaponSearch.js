@@ -38,7 +38,7 @@ export default function WeaponSearch({ search, onSearchChange }) {
     <div className="container">
       {/* Character selection */}
       <select className="selection" value={search} onChange={onSearchChange}>
-        <option value="">All Weapons</option>
+        <option value="">All weapons</option>
         {weapons.map((character) => (
           <option key={character} value={character}>
             {character}
@@ -50,14 +50,28 @@ export default function WeaponSearch({ search, onSearchChange }) {
       {weaponData && (
         <div className="char-card">
           <h2 className="char-name">{weaponData.name}</h2>
-          <img src={imagePath} alt="Weapon" />
+          <div class="image-container">
+            <img src={imagePath} alt="Weapon" />
 
-          <p>Type: {weaponData.type}</p>
-          <p>Rarity: {weaponData.rarity}</p>
-          <p>Base Attack: {weaponData.baseAttack}</p>
-          <p>Sub Status: {weaponData.subStat}</p>
-          <p>Location: {weaponData.location}</p>
-          <p>Description: {weaponData.passiveDesc}</p>
+            <p>
+              Type: {weaponData.type}
+              <br />
+              <br />
+              Rarity: {weaponData.rarity}
+              <br />
+              <br />
+              Base Attack: {weaponData.baseAttack}
+              <br />
+              <br />
+              Sub Status: {weaponData.subStat}
+              <br />
+              <br />
+              Location: {weaponData.location}
+              <br />
+              <br />
+              Description: {weaponData.passiveDesc}
+            </p>
+          </div>
         </div>
       )}
     </div>

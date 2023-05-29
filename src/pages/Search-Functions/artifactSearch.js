@@ -105,7 +105,6 @@ export default function ArtifactSearch({ search, onSearchChange }) {
               key={artifact}
               src={getImageUrl(artifact)}
               alt={artifact}
-              className="artifact-image"
               onClick={() => {
                 handleArtifactClick(artifact);
                 scrollToElement();
