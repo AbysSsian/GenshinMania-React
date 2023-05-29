@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/genshinmania/static/css/main.60d96620.css",
-    "main.js": "/genshinmania/static/js/main.3b8fb161.js",
+    "main.css": "/genshinmania/static/css/main.48d04d35.css",
+    "main.js": "/genshinmania/static/js/main.03381b84.js",
     "static/media/mondstadt-live.mp4": "/genshinmania/static/media/mondstadt-live.97eaede48c65b6254863.mp4",
     "static/media/liyue-live.mp4": "/genshinmania/static/media/liyue-live.2e380a9a038476c22024.mp4",
     "static/media/genshinfont.ttf": "/genshinmania/static/media/genshinfont.043193e9138e69762425.ttf",
@@ -24,7 +24,6 @@
     "static/media/promise-event.jpg": "/genshinmania/static/media/promise-event.9d4eaf7eb707349406b1.jpg",
     "static/media/rosabel.png": "/genshinmania/static/media/rosabel.56397ba8927709e6c972.png",
     "static/media/lauren.png": "/genshinmania/static/media/lauren.9772446005c4290dcf22.png",
-    "static/media/vito.png": "/genshinmania/static/media/vito.6a3268c24b0807af5dd6.png",
     "static/media/primetime.ttf": "/genshinmania/static/media/primetime.a45c49e0d1dd75e991e7.ttf",
     "static/media/twitter.png": "/genshinmania/static/media/twitter.b413b75b86f226240110.png",
     "static/media/elegy-for-the-end.webp": "/genshinmania/static/media/elegy-for-the-end.70b421eb381666ee04c2.webp",
@@ -43,6 +42,7 @@
     "static/media/the-bell.webp": "/genshinmania/static/media/the-bell.a6851b507be863ab2a35.webp",
     "static/media/windblume-ode.webp": "/genshinmania/static/media/windblume-ode.eab8b0e798ce37a42163.webp",
     "static/media/wolf-s-gravestone.webp": "/genshinmania/static/media/wolf-s-gravestone.f0258c47ffba7fa986ff.webp",
+    "static/media/vito.png": "/genshinmania/static/media/vito.5e49c6e9765a701117a9.png",
     "static/media/compound-bow.webp": "/genshinmania/static/media/compound-bow.fb53720d380a1d6c715f.webp",
     "static/media/aqua-simulacra.webp": "/genshinmania/static/media/aqua-simulacra.97247beccd8124af7bb4.webp",
     "static/media/lithic-blade.webp": "/genshinmania/static/media/lithic-blade.1b8fec73da751d7db3d8.webp",
@@ -169,12 +169,13 @@
     "static/media/information-icon.png": "/genshinmania/static/media/information-icon.d2a62b00096174b71dd1.png",
     "static/media/uparrow.png": "/genshinmania/static/media/uparrow.5b3bbf4d8b07045810a6.png",
     "static/media/discord.png": "/genshinmania/static/media/discord.667df059ddf407979d68.png",
+    "static/media/ .webp": "/genshinmania/static/media/ .f8f8f0498453a4423634.webp",
     "index.html": "/genshinmania/index.html",
-    "main.60d96620.css.map": "/genshinmania/static/css/main.60d96620.css.map",
-    "main.3b8fb161.js.map": "/genshinmania/static/js/main.3b8fb161.js.map"
+    "main.48d04d35.css.map": "/genshinmania/static/css/main.48d04d35.css.map",
+    "main.03381b84.js.map": "/genshinmania/static/js/main.03381b84.js.map"
   },
   "entrypoints": [
-    "static/css/main.60d96620.css",
-    "static/js/main.3b8fb161.js"
+    "static/css/main.48d04d35.css",
+    "static/js/main.03381b84.js"
   ]
 }
