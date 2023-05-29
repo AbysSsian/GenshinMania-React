@@ -1,6 +1,7 @@
 {
   "name": "genshinmania-app",
   "version": "0.1.0",
+  "homepage": "https://AbysSsian.github.io/genshinmania",
   "private": true,
   "homepage": "https://AbysSsian.github.io/genshinmania",
   "dependencies": {

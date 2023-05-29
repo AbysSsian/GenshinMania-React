@@ -222,7 +222,7 @@ export default function Menu() {
                     width="50"
                     height="50"
                   />
-                  <div className="image-name2">{character.name}</div>
+                  {character.name}
                 </div>
               ))}
             </div>

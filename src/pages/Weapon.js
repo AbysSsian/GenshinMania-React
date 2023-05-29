@@ -195,7 +195,7 @@ export default function Weapon() {
                   width="50"
                   height="50"
                 />
-                <div className="image-name">{weapon.name}</div>
+                {weapon.name}
               </div>
             ))}
           </div>

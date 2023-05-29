@@ -6,7 +6,7 @@ export default function WeaponSearch({ search, onSearchChange }) {
   const [weapons, setWeapons] = useState([]);
   const [weaponData, setWeaponData] = useState(null);
 
-  //const imagePath = require(`../../../public/weapons/${search}.webp`); require(`../../public/weapons/${weapon.name}.webp`)
+  const imagePath = `./weapons/${search}.webp`;
 
   // Fetch for selection option
   useEffect(() => {
@@ -51,10 +51,7 @@ export default function WeaponSearch({ search, onSearchChange }) {
         <div className="char-card">
           <h2 className="char-name">{weaponData.name}</h2>
           <div class="image-container">
-            <img
-              src={require(`../../../public/weapons/${search}.webp`)}
-              alt="Weapon"
-            />
+            <img src={imagePath} alt="Weapon" />
 
             <p>
               Type: {weaponData.type}

@@ -48,31 +48,17 @@ export default function CharacterSearch({ search, onSearchChange }) {
       {characterData && (
         <div className="char-card">
           <h2 className="char-name">{characterData.name}</h2>
-          <div class="image-container">
-            <img
-              src={`https://api.genshin.dev/characters/${search}/card`}
-              alt="Character Card"
-            />
+          <img
+            src={`https://api.genshin.dev/characters/${search}/card`}
+            alt="Character Card"
+          />
 
-            <p>
-              Title: {characterData.title}
-              <br />
-              <br />
-              Rarity: {characterData.rarity}*
-              <br />
-              <br />
-              Vision: {characterData.vision}
-              <br />
-              <br />
-              Weapon: {characterData.weapon}
-              <br />
-              <br />
-              Nation: {characterData.nation}
-              <br />
-              <br />
-              Description: {characterData.description}
-            </p>
-          </div>
+          <p>Title: {characterData.title}</p>
+          <p>Rarity: {characterData.rarity}*</p>
+          <p>Vision: {characterData.vision}</p>
+          <p>Weapon: {characterData.weapon}</p>
+          <p>Nation: {characterData.nation}</p>
+          <p>Description: {characterData.description}</p>
         </div>
       )}
     </div>
